@@ -9,13 +9,19 @@ def furlongs(rods):
 def time_to_walk(rods):
     return(miles(rods)/3.1*60)
 
-rods = float(input("Input rods: "))
-print(f"You input {rods} rods.")
-print(f"""
+def user_input():
+    global rods
+    rods = float(input("Input rods: "))
+def print_conversions():
+    print(f"""
+You input {rods} rods.
+
 Conversions
 Meters: {meters(rods)}
 Feet: {feet(rods)}
 Furlongs: {furlongs(rods)}
-Minutes to walk 10.0 rods: {time_to_walk(rods)}
-""")
+Minutes to walk 10.0 rods: {time_to_walk(rods)}""")
 
+if __name__ == '__main__':
+    user_input()
+    print_conversions()

@@ -16,5 +16,7 @@ class MyFirstTests(unittest.TestCase):
         self.assertEqual(furlongs(100), 2.5)
         self.assertEqual(furlongs(999999), 24999.975)
         self.assertEqual(time_to_walk(999999), 60483.96081583434)
-        
+
+if __name__ == '__main__':
+    unittest.main()
         
