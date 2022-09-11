@@ -12,9 +12,8 @@ Richter                 Joules                  TNT
 9.5                     {joules(9.5)}  {tnt(joules(9.5))}
 """)
 def user_input():
-    global richter
-    richter = float(input(f"Please enter a richter scale value: "))
-def print_output():
+    return(float(input(f"Please enter a richter scale value: ")))
+def print_output(richter):
     print(f"""
 Richter value: {richter}
 Equivalence in joules: {joules(richter)}
