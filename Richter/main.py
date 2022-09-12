@@ -19,6 +19,6 @@ Richter value: {richter}
 Equivalence in joules: {joules(richter)}
 Equivalence in tons of TNT: {tnt(richter)}
 """)
-print_predefined_values()
-print_output(user_input())
-
+if __name__ == "__main__":
+    print_predefined_values()
+    print_output(user_input())
