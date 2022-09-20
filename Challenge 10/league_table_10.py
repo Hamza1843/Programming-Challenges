@@ -56,4 +56,7 @@ def calc_goaldifference(teams, csv_contents):
 if __name__ == "__main__":
     csv_contents = read_csv(csv_file)
     teams=calc_goaldifference(calc_points(init_teams(csv_contents), csv_contents), csv_contents)
-    print(dict(sorted(teams.items(), key=lambda item: item[1])))
+    teams=(dict(sorted(teams.items(), key=lambda item: item[1])))
+    print(f"""{"#":<5}{"Team":<24}{"PTS":<24}{"GD":<24}""")
+    for i in range(19, 0, -1):
+        print(f"""{20-(i):<5}{list(teams.items())[i][0]:<24}{list(teams.items())[i][1][0]:<24}{list(teams.items())[i][1][1]:<24}""")
